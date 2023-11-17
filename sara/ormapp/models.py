@@ -1,11 +1,11 @@
-from django.db import models 
+from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee ID")
-    name=models.CharField(max_length=100)
-    salary=models.IntegerField()
+class Football (models.Model):
+    player_name=models.CharField(max_length=20)
     age=models.IntegerField()
+    score=models.IntegerField()
     email=models.EmailField()
-
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
+    date=models.DateField()
+    
+class FootballAdmin(admin.ModelAdmin):
+    list_display=('player_name','age','score','email','date')
